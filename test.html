@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app"><span v-html="message"></div>
+<BR>
+<div id="app"><span v-html="message2"></span></div>
+
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+      return {
+        message: 'aabbb',
+		message2: 'aaa',
+      }
+    },
+	
+  }).mount('#app')
+</script>n
