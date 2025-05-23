@@ -12,3 +12,6 @@ https://github.com/Ares-Chang/cdn-vue-develop-repo.git
 
 vue router cdn
 https://router.vuejs.org/installation
+
+
+Teste
