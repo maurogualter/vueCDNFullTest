@@ -1,0 +1,47 @@
+<html>
+<body>
+
+
+<div id="app">
+    {{ message }}
+    </BR>
+    {{ message2 }}
+</div>
+
+<script type="importmap">
+    { "imports": {
+        "vue":               "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.esm-browser.prod.js",
+        "vue-router":        "https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.1.5/vue-router.esm-browser.min.js",
+        "@vue/devtools-api": "https://unpkg.com/@vue/devtools-api@6.4.5/lib/esm/index.js",
+        "FoodItems":    "./test11/FoodItems.vue"
+    } }
+</script>
+
+<script type="module">
+    import { createRouter, createWebHistory } from 'vue-router';
+    import { createApp, ref } from 'vue';
+
+
+    const app = createApp({
+        setup() {
+            const message = ref('Hello Vue!');
+            const message2 = ref('Hello Vue! - v2');
+            return {
+                message,
+                message2,
+            }
+        }
+    });
+
+    const router = createRouter({
+        history: createWebHistory(),
+        routes: [{ path: '/:pathMatch(.*)*', component: app }]
+    })
+
+    app.use(router)
+
+    document.addEventListener('DOMContentLoaded', () => app.mount('#app'));
+</script>
+
+</body>
+</html>

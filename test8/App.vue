@@ -33,7 +33,7 @@ div {
 
 import FoodItems from '~/FoodItems.vue'
 import AnimalCollection from '~/AnimalCollection.vue'
-i
+
 
 export default {
   components: {

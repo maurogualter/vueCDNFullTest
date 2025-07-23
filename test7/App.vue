@@ -1,9 +1,9 @@
 <template>
   <p>Choose what part of this page you want to see:</p>
-  <button @click="activeComp = 'animal-collection'">Animals</button>
+  <button @click="activeComp = 'animal-collection'" >Animals</button>
   <button @click="activeComp = 'food-items'">Food</button><br>
   <div>
-    <component :is="activeComp"></component>
+    <component :is="activeComp" :msgG="msgGlobal" @changeMsgGlobal="changeMsgGlobal($event)"></component>
   </div>
 </template>
 
@@ -18,9 +18,16 @@ export default {
     'food-items': FoodItems,
     'animal-collection': AnimalCollection
   },
+
   data() {
     return {
-      activeComp: 'animal-collection'
+      activeComp: 'animal-collection',
+      msgGlobal: 'Mauro Gualter',
+    }
+  },
+  methods: {
+    changeMsgGlobal (username) {
+      this.msgGlobal = username;
     }
   }
 }
