@@ -1,9 +1,13 @@
 <template>
-  <p>Choose what part of this page you want to see 2:</p>
+  <p>Choose what part of this page you want to see 14:</p>
 
-  <nav><router-link to="/test12">Home</router-link> | <router-link to="/fooditems">fooditems</router-link> | <router-link to="/animalCollection">animalCollection</router-link></nav>
+  <nav>
+      <router-link to="/test14">Home</router-link>
+    | <router-link to="/test14/fooditems2">fooditems</router-link>
+    | <router-link to="/test14/animalCollection2">animalCollection</router-link>
+  </nav>
   <main>
-    <router-view />
+    <router-view></router-view>
   </main>
 <br>
   <span v-text="msgGlobal"></span> -
@@ -13,14 +17,7 @@
 
 <script>
 
-import FoodItems from '~/FoodItems.vue'
-import AnimalCollection from '~/AnimalCollection.vue'
-
 export default {
-  components: {
-    'food-items': FoodItems,
-    'animal-collection': AnimalCollection
-  },
 
   data() {
     return {

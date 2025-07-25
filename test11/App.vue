@@ -6,6 +6,8 @@
     <component :is="activeComp" :msgG="msgGlobal" @changeMsgGlobal="changeMsgGlobal($event)"></component>
   </div>
 </template>
+<br>
+<span v-text="msgGlobal"></span> -
 
 
 <script >
